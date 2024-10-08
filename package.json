@@ -1,0 +1,23 @@
+{
+  "name": "CA_template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Michael Roemer",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "http": "^0.0.1-security",
+    "jquery": "^3.7.1",
+    "path": "^0.12.7",
+    "postmonger": "^0.0.16"
+  },
+  "engines":{
+    "node": ">=10.0.0"
+  }
+}
