@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your custom activity</title>
+    <link rel="stylesheet" href="/css/salesforce-lightning-design-system.min.css">
+    <!-- Include jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- Include Postmonger -->
+    <script type="text/javascript" src="js/postmonger.js"></script>
+
+    <!-- Include RequireJS -->
+    <script type="text/javascript" src="js/require.js"></script>
+    <style>
+        .slds-form-element {
+            margin-bottom: 20px;
+        }
+        .centered-image {
+            display: block;
+            margin: 50px auto 20px auto; /* Center the image with 50px top margin and 20px bottom margin */
+        }
+        .text-area {
+            text-align: center; /* Center align the text */
+            margin: 20px; /* Space around the text */
+        }
+    </style>
+    <script type="text/javascript">
+        (function () {
+            var config = {
+                baseUrl: 'js/'
+            };
+
+            var dependencies = [
+                'customActivity'
+            ];
+
+            require(config, dependencies);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="slds-scope">
+        <!-- Added centered image -->
+        <img src="/image.png" alt="Your Logo" class="centered-image" width="150" height="77">
+
+        <!-- Space for text below the image -->
+        <div class="text-area">
+            <p>
+                This is a custom activity that calls a provided endpoint to retrieve some data.<br>
+                It can be customized to your needs.
+                It will also store id, email, contact key and personlized link. 
+            </p>
+        </div>
+
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <form class="slds-form slds-form_stacked">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="URL_endpoint">Endpoint URL</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="URL_endpoint" class="slds-input" placeholder="Enter the url for your endpoint">
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="event_name">Event name of the entry point</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="event_name" class="slds-input" placeholder="Enter the name of the entry event. Event must be of type API">
+                        </div>
+                    </div>
+                    <div class="slds-form-element"></div>
+                        <label class="slds-form-element__label" for="de_name">Data Extension external key to store personalisation attributes</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="de_name" class="slds-input" placeholder="Enter the external key of the data extension">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
